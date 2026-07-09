@@ -1,0 +1,67 @@
+/* Custom Engine Base Configuration Modifications */
+body {
+    background-color: #0F172A;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(34, 197, 94, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 40%);
+    background-attachment: fixed;
+}
+
+/* Glassmorphism Structural Cards UI Engine */
+.glass-card {
+    background: rgba(30, 41, 59, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Custom Multi-Axis Structural Animations */
+@keyframes slow-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: slow-spin 20s linear infinite;
+}
+
+@keyframes float-drift {
+    0% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.1; }
+    50% { transform: translateY(-40px) translateX(20px) rotate(180deg); opacity: 0.3; }
+    100% { transform: translateY(0px) translateX(0px) rotate(360deg); opacity: 0.1; }
+}
+
+/* Floating Leaf Element Layouts */
+.leaf {
+    position: fixed;
+    font-size: 2rem;
+    user-select: none;
+    z-index: 0;
+    filter: blur(1px);
+}
+.leaf-1 { top: 15%; left: 5%; animation: float-drift 25s infinite ease-in-out; }
+.leaf-2 { top: 65%; right: 8%; animation: float-drift 30s infinite ease-in-out 3s; }
+.leaf-3 { bottom: 10%; left: 25%; animation: float-drift 22s infinite ease-in-out 7s; }
+
+/* Inbound Frame Entry Transitions */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Interactive Scrollbar Implementations */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #22C55E;
+}
